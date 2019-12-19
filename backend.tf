@@ -2,6 +2,6 @@ terraform {
   backend "s3" {
     bucket = "backend-state-taza"
     key    = "infrastructure"
-    region = "us-east-1"
+    region = "eu-west-1"
   }
 }
