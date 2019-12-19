@@ -1,12 +1,9 @@
 resource "aws_s3_bucket" "b" { 
-  bucket = "backend-state-tazagul" 
+  bucket = "my-tf-test-bucket" 
   acl    = "private" 
 
   tags = { 
-    Name        = "backend-state-tazagul" 
+    Name        = "My bucket" 
     Environment = "Dev" 
   } 
-  versioning {
-    enabled = true
-  }
 } 
