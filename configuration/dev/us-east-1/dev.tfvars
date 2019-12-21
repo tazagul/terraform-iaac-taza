@@ -3,4 +3,4 @@ instance_type   = "t2.micro"
 count_instance  = 10
 associate_public_ip_address = "true"
 user            = "centos"
-ssh_key_location = "~/.ssh/id.rsa"
+ssh_key_location = "~/.ssh/id_rsa"
