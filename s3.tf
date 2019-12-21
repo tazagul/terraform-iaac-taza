@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "b" { 
-  bucket = "my-tf-test-bucket-tazagul" 
+  bucket = "my-tf-test-bucket-tazagulk" 
   acl    = "private" 
 
   tags = { 
@@ -8,6 +8,6 @@ resource "aws_s3_bucket" "b" {
   } 
 
   versioning {
-    enabled =tre
+    enabled = true
   }
 }
