@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "b" { 
-  bucket = "my-tf-test-bucket-tazagulk" 
+  bucket = "backend-state-tazagul" 
   acl    = "private" 
 
   tags = { 
