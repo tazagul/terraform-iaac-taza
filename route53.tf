@@ -3,5 +3,5 @@ resource "aws_route53_record" "www" {
   name    = "www.tazagul.net" 
    type    = "A" 
   ttl     = "60" 
-   records = ["aws_instance.web.[0]."] 
+   records = ["aws_instance.web.[0].52.3.226.100"] 
 } 
