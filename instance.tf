@@ -25,4 +25,4 @@ resource "aws_instance" "web" {
     Name = "HelloWorld${count.index +1}"
   }
 }
-}
+
