@@ -1,9 +1,7 @@
-resource "aws_s3_bucket" "b" { 
-  bucket = "my-tf-test-bucket.taza" 
-  acl    = "private" 
-
-  tags = { 
-    Name        = "My bucket" 
-    Environment = "Dev" 
-  } 
-} 
+terraform {
+  backend "s3" {
+    bucket = "terraform-us-taza"
+    key    = "aws/iam/iam_state"
+    region = "us-east-1"
+  }
+}
