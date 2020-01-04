@@ -18,6 +18,19 @@ resource "aws_instance" "web" {
         "sudo systemctl start httpd",
         ]
       }
+       provisioner "file" {
+    connection {
+      host        = self.public_ip
+      type        = "ssh"
+      user        = var.user
+      private_key = file(var.ssh_key_location)
+      }
+      inline = [
+        "sudo yum install -y epel-release",
+        "sudo yum install httpd -y ",
+        "sudo systemctl start httpd",
+        ]
+      }
      provisioner "local-exec" {
       command = "echo ${aws_instance.web.public_ip} >> public_ips.txt"
       command = "wget -O /tmp  https://wordpress.org/download/"
